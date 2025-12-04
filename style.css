@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: linear-gradient(135deg, #f0b111 0%, #6e5488 100%);
+    background: linear-gradient(135deg, #f0b111 0%, #6e5488 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -99,7 +99,7 @@ h1 {
 }
 
 
-#emoji {
+.emoji {
     box-shadow: #ffffff 0px 0px 20px 5px;
     border-radius: 50%;
     padding: 10px;
@@ -215,3 +215,131 @@ button {
             justify-content: center;
             align-items: center;
         }
+
+
+
+/* Tablettes et petits écrans (768px et moins) */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 20px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    .score-board {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .score {
+        padding: 15px;
+    }
+    
+    .score p {
+        font-size: 2.5em;
+    }
+    
+    .choix-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .vs {
+        transform: rotate(90deg);
+        font-size: 1.5em;
+    }
+    
+    .boutons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    button {
+        width: 100%;
+        padding: 15px 20px;
+    }
+    
+    #emoji {
+        font-size: 35px;
+    }
+}
+
+/* Mobiles (480px et moins) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 20px 15px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    
+    .score h2 {
+        font-size: 0.9em;
+    }
+    
+    .score p {
+        font-size: 2em;
+    }
+    
+    .choix-joueur p,
+    .choix-ordi p {
+        font-size: 3em;
+    }
+    
+    .message {
+        font-size: 1em;
+        padding: 12px;
+    }
+    
+    button {
+        padding: 12px 15px;
+        font-size: 0.9em;
+    }
+    
+    #emoji {
+        font-size: 30px;
+        padding: 8px;
+    }
+    
+    .btn-reset {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+}
+
+/* Très petits mobiles (360px et moins) */
+@media (max-width: 360px) {
+    h1 {
+        font-size: 1.3em;
+    }
+    
+    .score {
+        padding: 10px;
+    }
+    
+    .score p {
+        font-size: 1.8em;
+    }
+    
+    .choix-joueur p,
+    .choix-ordi p {
+        font-size: 2.5em;
+    }
+    
+    .choix-joueur,
+    .choix-ordi {
+        padding: 15px;
+    }
+    
+    #emoji {
+        font-size: 25px;
+    }
+}
